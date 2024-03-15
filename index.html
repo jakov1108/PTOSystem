@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PTO Sustav</title>
+    <link rel="stylesheet" href="styles/style-general.css" />
+    <link rel="stylesheet" href="styles/style-calendar.css" />
+    <link rel="stylesheet" href="styles/style-media-phone.css" />
+    <link rel="stylesheet" href="styles/style-media-desktop.css" />
+    <script src="scripts/login-logout.js" defer></script>
+    <script src="scripts/calendar.js" defer></script>
+    <script src="scripts/pto-system.js" defer></script>
+  </head>
+  <body>
+    <!--Form for loging in-->
+    <div id="login">
+      <h2>Prijava</h2>
+      <form id="loginForm">
+        <label for="email">Email:</label>
+        <input
+          placeholder="Unesite email"
+          type="email"
+          id="email"
+          name="email"
+          required
+        />
+        <label for="password">Lozinka:</label>
+        <input
+          placeholder="Unesite lozinku"
+          type="password"
+          id="password"
+          name="password"
+          required
+        />
+        <button type="submit">Prijava</button>
+      </form>
+    </div>
+
+    <!--Section for PTOs informations-->
+    <div id="ptoInfo" style="display: none">
+      <h1>PTO Informacije</h1>
+      <div id="isLogged">
+        Prijavljeni ste u sustav, za odjavu kliknite:
+        <div id="logoutContainer">
+          <button id="logout">Odjava</button>
+        </div>
+      </div>
+
+      <!--Form for adding new PTOs-->
+      <div id="ptoSubmission">
+        <h3>Dodavanje PTO-a</h3>
+        <form id="ptoForm">
+          <div id="employeeSelectForm" class="formContainer">
+            <label id="employeeSelectLabel" for="employeeSelect"
+              >Zaposlenik:</label
+            >
+            <select id="employeeSelect" name="employee" required></select>
+          </div>
+          <div class="formContainer">
+            <label for="startCalendar">Početak:</label>
+            <div class="calendar" id="startCalendar">
+              <div class="calendar-nav">
+                <button type="button" class="calendar-prev">&lt;</button>
+                <span class="calendar-month-year"></span>
+                <button type="button" class="calendar-next">&gt;</button>
+              </div>
+              <div class="calendar-day-names">
+                <div class="day-name">Pon</div>
+                <div class="day-name">Uto</div>
+                <div class="day-name">Sri</div>
+                <div class="day-name">Čet</div>
+                <div class="day-name">Pet</div>
+                <div class="day-name">Sub</div>
+                <div class="day-name">Ned</div>
+              </div>
+              <div class="calendar-days"></div>
+            </div>
+          </div>
+          <input type="hidden" id="startDate" name="startDate" />
+          <div class="formContainer">
+            <label for="endCalendar">Kraj:</label>
+            <div class="calendar" id="endCalendar">
+              <div class="calendar-nav">
+                <button type="button" class="calendar-prev">&lt;</button>
+                <span class="calendar-month-year"></span>
+                <button type="button" class="calendar-next">&gt;</button>
+              </div>
+              <div class="calendar-day-names">
+                <div class="day-name">Pon</div>
+                <div class="day-name">Uto</div>
+                <div class="day-name">Sri</div>
+                <div class="day-name">Čet</div>
+                <div class="day-name">Pet</div>
+                <div class="day-name">Sub</div>
+                <div class="day-name">Ned</div>
+              </div>
+              <div class="calendar-days"></div>
+            </div>
+          </div>
+          <input type="hidden" id="endDate" name="endDate" />
+          <button type="submit" id="submitButton">Dodaj PTO</button>
+        </form>
+      </div>
+
+      <!--List for showing PTOs-->
+      <div id="ptoListView">
+        <h3>PTO Lista</h3>
+        <ul id="ptoList"></ul>
+      </div>
+    </div>
+
+    <!--Login message to see PTOs-->
+    <div id="guestMessage">
+      <p>Molimo prijavite se za pregled.</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+@media (max-width: 800px) {
+    body {
+      max-width: 90%;
+    }
+  
+    #login {
+      position: relative;
+      width: 90%;
+      margin: 100px auto 10px !important;
+      padding: 15px;
+    }
+  
+    #login {
+      margin-top: 0;
+    }
+  
+    form,
+    button,
+    input,
+    select {
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+  
+    .calendar {
+      margin: 10px;
+      width: 100%;
+      flex-basis: 100%;
+      max-width: none;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+  
+    .calendar-nav,
+    .calendar-days,
+    .calendar-day-names {
+      padding: 5px 5px;
+    }
+  
+    #loginForm,
+    #login {
+      width: 90%;
+      padding: 15px;
+      display: block;
+      margin: 10px auto;
+    }
+  
+    .day-name,
+    .day {
+      padding: 5px 0;
+    }
+  
+    #startCalendar,
+    #endCalendar {
+      margin: 0 10px;
+      margin-bottom: 40px;
+      margin-top: 10px;
+      max-width: 100%;
+    }
+  
+    #ptoForm #employeeSelect {
+      margin-bottom: 40px;
+    }
+  }

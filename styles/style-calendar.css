@@ -1,0 +1,158 @@
+.calendar {
+  flex-basis: 100%;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  padding: 10px;
+  max-width: 100%;
+  margin: auto;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #f7f7f7;
+  padding: 10px;
+}
+
+.calendar-day-names {
+  border-radius: 3px;
+}
+
+.day-name,
+.day {
+  padding: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.day {
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.calendar-nav button {
+  padding: 5px 10px;
+  font-size: 16px;
+  margin: 0 5px;
+  background-color: #007bff !important;
+  min-width: 30px;
+  width: auto;
+}
+
+.calendar-month-year {
+  margin: 0 10px;
+}
+
+.calendar-prev,
+.calendar-next {
+  margin: 0 10px;
+}
+
+.calendar {
+  margin: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.calendar-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #efeeee;
+  border-radius: 10px;
+}
+
+.calendar-nav button {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.calendar-day-names,
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+
+.day-name {
+  background-color: #f7f7f7;
+  padding: 10px 0;
+  font-weight: bold;
+}
+
+.day {
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.day-name,
+.day {
+  padding: 10px 0;
+  overflow: hidden;
+}
+
+.day:hover {
+  background-color: #e9ecef;
+}
+
+.day.selected {
+  background-color: #007bff;
+  color: white;
+  border-radius: 50%;
+}
+
+.day:hover,
+.day.selected {
+  background-color: #0056b3 !important;
+  color: white;
+  border-radius: 50%;
+}
+
+.day.today {
+  background-color: #bdbaba;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.day {
+  border-radius: 50% !important;
+}
+
+.day-name:first-child {
+  border-left: gray;
+  border-top-left-radius: 30%;
+  border-bottom-left-radius: 30%;
+}
+
+.day-name:last-child {
+  border-left: gray;
+  border-top-right-radius: 30%;
+  border-bottom-right-radius: 30%;
+}
+
+.empty,
+.empty:hover {
+  border: none !important;
+  background-color: inherit !important;
+  cursor: default;
+}
+
+#startCalendar,
+#endCalendar {
+  margin: 0 10px;
+  max-width: calc(100% - 40px);
+  box-sizing: border-box;
+}

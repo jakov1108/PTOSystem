@@ -1,0 +1,70 @@
+@media (min-width: 800px) {
+    #ptoForm {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+    }
+  
+    .calendar {
+      margin: 10px 50px !important;
+      width: 100%;
+      max-width: none;
+    }
+  
+    #employeeSelect {
+      margin-right: 30px;
+    }
+  
+    #ptoSubmission {
+      max-width: 1200px;
+      margin: auto;
+      margin-top: 40px;
+    }
+  
+    #startCalendar,
+    #endCalendar {
+      box-sizing: unset;
+    }
+  
+    #employeeSelectForm {
+      display: flex;
+      align-items: flex-start;
+    }
+  
+    #employeeSelectLabel {
+      padding-left: 58px;
+    }
+  
+    .formContainer label {
+      text-align: center;
+    }
+  
+    #ptoListView {
+      display: grid !important;
+      grid-template-columns: repeat(4, auto);
+      grid-row: auto;
+      align-items: start;
+      justify-content: center;
+      gap: 15px;
+    }
+  
+    #ptoListView li {
+      display: flex;
+      border: 5px solid #cbcaca;
+      padding: 8px;
+      list-style-type: none;
+      block-size: auto;
+    }
+  
+    #logoutContainer {
+      display: flex;
+      justify-content: flex-start;
+      text-align: center;
+      max-width: 400px;
+    }
+  
+    #submitButton {
+      margin: 50px !important;
+    }
+  }
